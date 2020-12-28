@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;  
+}
+
+.topnav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: red;
+    transition: width .3s;
+}
+
+.topnav a.active::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: black;
+    transition: width .3s;
+}
+
+.topnav a:hover::after {
+    width: 100%;
+}
+
+.topnav a:hover {
+
+}
+
+.topnav a.active {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+
+
+
+
+
