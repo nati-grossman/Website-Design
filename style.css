@@ -26,15 +26,6 @@ body {
     transition: width .3s;
 }
 
-.topnav a.active::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: black;
-    transition: width .3s;
-}
-
 .topnav a:hover::after {
     width: 100%;
 }
@@ -43,10 +34,18 @@ body {
 
 }
 
-.topnav a.active {
-  background-color: #f2f2f2;
-  color: black;
+.Login_photos {
+    width: 100%;
+    height: 450px;
+    background-color: aqua;
 }
+
+h1 {
+    font-size: 20rm;
+    color:blue;
+    font-weight:bold;
+}
+
 
 
 
