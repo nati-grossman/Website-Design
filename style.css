@@ -3,153 +3,35 @@ body {
   font-family: 'Arimo', sans-serif;
 }
 
-/* navbar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-    z-index: 1;
+
+/*------------------------------------------------------------------------*/
+/* css from class */
+.aligncenter {
+  max-width: 50%;
+  display: block;
+  margin: auto;
 }
 
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 27px;  
-  text-align:center;
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
-.topnav ul {
-    padding: 0;
-    margin: 0;
-    width:100%;
-    list-style-type: none;
-    text-align:center;
-    
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.topnav li {
-    display:inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right:10px;
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  } 
 }
 
-.topnav a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: red;
-    transition: width .3s;
+#text {
+    margin: 20px;
 }
-
-.topnav a:hover::after {
-    width: 100%;
+#img {
+    margin: 20px;
 }
-
-.topnav a:hover {
-
-}
-
-/* titel web */
-.Login_photos {
-/*    width: 100%;*/
-    height: 550px;
-    padding-right: 10%;
-/*    background-color: aqua;*/
-}
-
-h1 {
-    font-size: 5rem;
-    margin: 0;
-    margin-top: 100px;
-    color:red;
-    font-weight:bold;
-    display:inline-block;
-}
-
-.Login_photos p {
-    display:block;
-    margin: 0;
-    font-size: 5rem;
-    border-style: none;
-    display: inline;
-}
-
-/* ICONS */
-#icons {
-  width: 100%;
-  height: 100px; 
-/*  background-color: aqua;*/
-  text-align: center;
-  margin-top: 30px;
-}
-
-.icon_circles {
-  width: 60px;
-  height: 60px;
-  padding: 15px;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;      
-  margin: 2px;
-  background: linear-gradient(red, white);
-}
-
-.icon_circles:hover{
- -webkit-animation: rotation 1s infinite linear;
-}
-
-@-webkit-keyframes rotation {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-    }
-}
-
-.fa {
-  font-size: 3em; 
-  position: absolute;
-  display: inline-block; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);   
-}
-
-/* ABOUT */
-#about {
-  width: 100%;
-  height: 600px;
-  background-color: aquamarine;
-} 
-
-
-/* NEWS */
-#news {
-  width: 100%;
-  height: 600px;
-    background-color: beige;
-} 
-
-
-/* PROJECT */
-#project {
-  width: 100%;
-  height: 600px;
-  background-color: aquamarine;
-} 
-
-
-/* CONTACT */
-#contact {
-  width: 100%;
-  height: 600px;
-  background-color: beige;
-} 
-
