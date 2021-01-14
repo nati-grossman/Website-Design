@@ -1,15 +1,8 @@
 body {
-  margin: 0;
+  /*font-family: 'Assistant', sans-serif;*/
   font-family: 'Arimo', sans-serif;
-}
-
-
-/*------------------------------------------------------------------------*/
-/* css from class */
-.aligncenter {
-  max-width: 50%;
-  display: block;
-  margin: auto;
+  line-height: 1.5;
+  margin: 0;
 }
 
 img {
@@ -18,20 +11,76 @@ img {
   height: auto;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.container {
+  max-width: 900px;
+  margin: auto;
 }
 
-@media (max-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr;
-  } 
+.about {
+  background: url(img/background3.jpg) center;
+  background-size: cover;
+  color: #fff;
+  padding: 180px;  
+  text-align: center;
+  font-size: 24px; 
 }
 
-#text {
-    margin: 20px;
+.about .container{
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 720px;
+    padding: 10px;
 }
-#img {
-    margin: 20px;
+
+.contact {
+  background: #e0d9d0;
+  padding: 40px;
+  font-size: 24px;
+  text-align: center;
 }
+
+h1, h2, .logo {
+  font-family: 'Secular One', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.contact h2 {
+  font-size: 36px;
+}
+
+.logo {
+  font-size: 24px;
+  margin: auto;
+  display: table;
+  text-align: center;
+}
+
+.logo img {
+  display: block;
+  margin: auto;
+}
+/* Dog breed */
+div.polaroid {
+    border-radius: 8px;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    
+    
+    margin:  10px auto;/*we dont need it...*/
+}
+
+div.polaroid img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
