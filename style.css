@@ -116,16 +116,22 @@ h1 {
     color: white;
     font-size: 5vh; 
     padding: 40px;
+    
+    display: inline;
 }
 
 .titel_gallery h3{
-     border-bottom: 3px solid white;
+    width: 900px;
+    margin: auto; 
+    
+    
+    border-bottom: 3px solid white;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 3px;
+    grid-gap: 15px  
 }
 
 .gallery img {
@@ -134,16 +140,24 @@ h1 {
 }
 
 .desc {
-    padding: 15px;
+    padding: 15px;    
+    place-self: center;
 }
 
 .gallery .desc p {
     font-size: 5vh;
+    
+    font-size: 3vh;
     color: white;
+    width: 200px;
+    margin: auto;
+    margin-top: 30px;
 }
 
 .gallery .desc {
     transition: .3s;
+    
+    margin-bottom: 30px;
 }
 
 .gallery .desc:hover {
@@ -154,7 +168,9 @@ h1 {
     box-shadow: 10px 10px 10px 0 rgba(255, 255, 255, 0.4), 0 8px 20px 0 rgba(255, 255, 255, 0.4);
 }
 
-
+.gallery .desc:hover p{
+    border-bottom: 2px solid white;
+}
 
 /*
 div.desc {
@@ -194,7 +210,7 @@ div.desc {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 40px 2px;
     cursor: pointer;
     border-radius: 16px;
     background: linear-gradient(to left, white 50%, black 50%) right;
