@@ -1,10 +1,22 @@
 body {
-    /*font-family: 'Assistant', sans-serif;*/
     font-family: 'Arimo', sans-serif;
     line-height: 1.5;
     margin: 0;
     background-color: black;
 }
+
+
+/* for all */
+h1,
+h2 {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 40px;
+}
+
 
 /* logo */
 .logo {
@@ -30,79 +42,83 @@ body {
     margin: auto;
 }
 
-/* welcome */
-.welcome .img img {
+
+/* responsive &  container */
+.responsive_img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.internal_container {
     max-width: 100%;
-    width: auto;
-    height: auto;
+    margin: auto;
+    /*padding: 0 1rem;*/
+    padding: 3rem 1rem;
+}
+
+.external_container{
+    display: grid;
+    grid-gap: 10rem;
+}
+
+.responsive_text_img {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-areas:
+        "text"
+        "img";
+    justify-items: center;
+}
+
+.responsive_img_text {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+        "text"
+        "img";
+    justify-items: center;
+}
+
+@media (min-width: 680px) {
+    .responsive_text_img {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:  "text img";
+    }
+    
+    .responsive_img_text {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:  "img text";
+    }
+}
+
+.img_grid {
+    grid-area: img;
+    width: 100%;
+}
+
+.text_grid {
+    max-width: 400px;
+    grid-area: text;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin: auto;
+}
+
+
+/* Samsung_S20 titel*/
+.Samsung_S20{
     background-color: white;
 }
 
-.welcome {
-    background-size: cover;
+.Samsung_text{
     color: black;
-    position: relative;
-    text-align: center;
-    font-size: 24px;
-
-    margin: 0;
-    background-color: white;
 }
 
-.welcome .container {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    color: black;
-    max-width: 720px;
-}
 
-/* for all */
-h1,
-h2 {
-    font-family: 'Secular One', sans-serif;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-/* colors */
-.grid {
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    font-size: 34px;
-    position: relative;
-    background-color: black;
-    padding: 20px;
-    margin-top: 0px;
-}
-
-.grid img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-
-.grid .text_right {
-    max-width: 350px;
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-.grid .text_left {
-    max-width: 350px;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    color: white;
+/* purchase */
+.purchase .button {
+    padding: 10px 100px;
 }
 
 
@@ -114,24 +130,24 @@ h1 {
 
 .titel_gallery {
     color: white;
-    font-size: 5vh; 
+    font-size: 5vh;
     padding: 40px;
-    
+
     display: inline;
 }
 
-.titel_gallery h3{
+.titel_gallery h3 {
     width: 900px;
-    margin: auto; 
-    
-    
+    margin: auto;
+
+
     border-bottom: 3px solid white;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px  
+    grid-gap: 15px
 }
 
 .gallery img {
@@ -140,14 +156,14 @@ h1 {
 }
 
 .desc {
-    padding: 15px;    
+    padding: 15px;
     place-self: center;
 }
 
 .gallery .desc p {
     font-size: 5vh;
-    
-    font-size: 3vh;
+
+    font-size: 4.5vh;
     color: white;
     width: 200px;
     margin: auto;
@@ -156,50 +172,17 @@ h1 {
 
 .gallery .desc {
     transition: .3s;
-    
     margin-bottom: 30px;
 }
 
+
 .gallery .desc:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.gallery img:hover {
-    box-shadow: 10px 10px 10px 0 rgba(255, 255, 255, 0.4), 0 8px 20px 0 rgba(255, 255, 255, 0.4);
-}
-
-.gallery .desc:hover p{
+.gallery .desc:hover p {
     border-bottom: 2px solid white;
 }
-
-/*
-div.desc {
-    padding: 15px;
-}
-*/
-
-/*
-.g desc {
-    text-align: center;
-    color: white;
-    padding: 0;
-    margin: 0;
-}
-*/
-
-/*
-.g div {
-    padding: 0;
-    margin-bottom: 55px;
-    transition: .3s;
-}
-*/
-
-/*
-.g div:hover {
-    transform: scale(1.1);
-}
-*/
 
 
 /* button */
@@ -209,8 +192,10 @@ div.desc {
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    margin: 40px 2px;
+    /*display: inline-block;
+    margin: 40px 2px;*/
+    display: table;
+    margin: 40px auto;
     cursor: pointer;
     border-radius: 16px;
     background: linear-gradient(to left, white 50%, black 50%) right;
@@ -234,6 +219,7 @@ div.desc {
     color: white;
     background-position: left;
 }
+
 
 /* contact */
 .contact a {
